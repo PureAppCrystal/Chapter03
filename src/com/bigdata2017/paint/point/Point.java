@@ -1,6 +1,9 @@
-package paint;
+package com.bigdata2017.paint.point;
 
-public class Point {
+import com.bigdata2017.paint.interface_main.Drawable;
+import com.bigdata2017.paint.interface_main.Resizable;
+
+public class Point implements Drawable, Resizable {
 	private int x;
 	private int y;
 	
@@ -48,6 +51,21 @@ public class Point {
 		}
 		
 	}
+
+
+
+
+	@Override
+	public void draw() {
+		show();
+	}
+
+	@Override
+	public void resize(double rate) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 	
 
