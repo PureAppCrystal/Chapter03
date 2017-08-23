@@ -55,11 +55,29 @@ public class PaintApp {
 		Shape s2 = new Rectangle();
 		Shape s3 = new Circle(10,20,5);
 		
+		
+		//anonymous class - 한번만...객체를만들고 버리겠다?
+		Point[] points = new Point[10];
+		draw( new Drawable() {
+
+			@Override
+			public void draw() {
+				System.out.println( points );
+				System.out.println("한번만 만들고 버릴 도형을 그렸습니다.");
+				
+			}
+			
+		});
+		
+		
 		System.out.println("--------------------------");
 		System.out.println("====== resize =======");
 		resize( new Triangle() );
 		resize( new Rectangle() );
 		resize( new Circle(10,20,10) );
+		
+		
+		
 		
 		System.out.println("--------------------------");
 		System.out.println("====== instanceof =======");
